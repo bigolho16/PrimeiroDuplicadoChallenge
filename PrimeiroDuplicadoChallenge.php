@@ -10,16 +10,16 @@
 // - Para [8, 4, 6, 2, 6, 4, 7, 9, 5, 8], a saída deverá ser solution(a) = 6
     
 function solution ($a) {
-  $recebedor = [];
-  $result = -1;
+  $resultado = -1;
+  $primeiroindice = 0;
   for ($x=0; $x < count($a); $x++) {
-    if (in_array($a[$x], $recebedor)) {
-      $result = $a[$x];
+    $primeiroindice = array_search($a[$x], $a);
+    if ($primeiroindice < $x) {
+      $resultado = $a[$x];
       break;
     }
-    array_push($recebedor, $a[$x]);
   }
-  return $result;
+  return $resultado;
 }
-solution([1, 2, 3, 4, 7, 7]); 
+echo solution([8, 4, 1, 2, 10, 14, 7, 9, 5, 18]);
 ?>
