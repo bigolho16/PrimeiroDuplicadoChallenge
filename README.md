@@ -3,3 +3,6 @@
 
 # Referência:
 - https://codesignal.com/
+
+# Créditos:
+Leandro Lobo
